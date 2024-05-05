@@ -8,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
 CORSMiddleware,
-allow_origins = ["http://localhost:5173"]
+allow_origins = ["http://localhost:3000"]
 )
 
 @app.get("/async")
@@ -19,4 +19,4 @@ async def async_response():
     time.sleep(sleep_time)
     print(f"Sleep for time {sleep_time}")
     end_time = time.time()
-    return JSONResponse({"elapsed": end_time - start_time})
+    return JSONResponse({"elapsed": round(end_time - start_time, 3)})

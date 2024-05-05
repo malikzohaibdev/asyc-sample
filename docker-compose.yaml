@@ -1,0 +1,15 @@
+services:
+  server:
+    container_name: fastapi_backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"  
+  client:
+    container_name: vue-client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
