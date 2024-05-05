@@ -1,10 +1,15 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from random import uniform
 import time
 
 app = FastAPI()
 
+app.add_middleware(
+CORSMiddleware,
+allow_origins = ["http://localhost:5173"]
+)
 
 @app.get("/async")
 async def async_response():
