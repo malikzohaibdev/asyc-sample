@@ -4,8 +4,8 @@ const props = defineProps(["elapsedTime"])
 
 </script>
 <template>
-    <div>
-        <h3>{{ props.elapsedTime }}</h3>
-    </div>
+
+    <h3>{{ props.elapsedTime }}</h3>
+
 </template>
 <style></style>

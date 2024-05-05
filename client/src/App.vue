@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue"
 import Sleep from "./components/Sleep.vue"
-const execTime = ref(null)
+const execTime = ref(0)
 const loading = ref(false)
 const getRequest = async function () {
     try {
@@ -19,10 +19,16 @@ const getRequest = async function () {
 <template>
 
     <h1>Elapsed Time</h1>
-    <div v-if="loading">
-        Loading....
+
+    <div>
+        <div v-if="loading">
+            Loading....
+        </div>
+        <div v-else>
+            <Sleep :elapsed-time="execTime"></Sleep>
+        </div>
     </div>
-    <Sleep v-else :elapsed-time="execTime"></Sleep>
+
     <button @click="getRequest">Send Request</button>
 </template>
 
