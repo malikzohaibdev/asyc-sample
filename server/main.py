@@ -17,5 +17,6 @@ async def async_response():
     # sleep for random time between 0 and 2 seconds
     sleep_time = uniform(0.0, 2.0)
     time.sleep(sleep_time)
+    print(f"Sleep for time {sleep_time}")
     end_time = time.time()
     return JSONResponse({"elapsed": end_time - start_time})
