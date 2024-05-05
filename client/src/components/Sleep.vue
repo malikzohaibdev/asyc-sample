@@ -5,7 +5,7 @@ const props = defineProps(["elapsedTime"])
 </script>
 <template>
 
-    <h3>{{ props.elapsedTime }}</h3>
+    <h3 class="text-3xl">{{ props.elapsedTime }} Seconds</h3>
 
 </template>
 <style></style>

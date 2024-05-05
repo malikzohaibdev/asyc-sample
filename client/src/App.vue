@@ -18,9 +18,9 @@ const getRequest = async function () {
 </script>
 <template>
 
-    <h1>Elapsed Time</h1>
+    <h1 class="text-4xl">Elapsed Time</h1>
 
-    <div>
+    <div class="my-2">
         <div v-if="loading">
             Loading....
         </div>
@@ -29,7 +29,7 @@ const getRequest = async function () {
         </div>
     </div>
 
-    <button @click="getRequest">Send Request</button>
+    <button class="bg-indigo-500 text-black-400 py-4 px-12 text-lg" @click="getRequest">Send Request</button>
 </template>
 
-<style scoped></style>
+<style></style>
